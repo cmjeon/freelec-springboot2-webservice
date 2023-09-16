@@ -1,6 +1,20 @@
 spring:
+  # H2 Setting Info (H2 Console에 접속하기 위한 설정정보 입력)
+  h2:
+    console:
+      enabled: true  # H2 Console을 사용할지 여부 (H2 Console은 H2 Database를 UI로 제공해주는 기능)
+      path: /h2-console  # H2 Console의 Path
+  profiles:
+    include: oauth
   jpa:
     show_sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    url: jdbc:h2:mem:testdb
+#    hikari:
+#      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
 server:
   servlet:
     encoding:
