@@ -58,6 +58,13 @@ jobs:
       shell: bash
 
     - name: Generate deployment package # (final)
+      # zip 에 포함시킬 파일들을 담을 before-deploy 생성
+      # before-deploy 로 복사
+      # before-deploy 로 이동
+      # 전체 압축하여 zip 파일 생성
+      # 상위 디렉토리 이동
+      # deploy 디렉토리 생성
+      # deploy 로 zip 파일 이동
       run: |
         mkdir -p before-deploy
         cp scripts/*.sh before-deploy/
@@ -65,7 +72,8 @@ jobs:
         cp build/libs/*.jar before-deploy/
         cd before-deploy
         zip -r before-deploy *
-        cd ../ && mkdir -p deploy
+        cd ../
+        mkdir -p deploy
         mv before-deploy/before-deploy.zip deploy/$PROJECT_NAME.zip
       shell: bash
 
