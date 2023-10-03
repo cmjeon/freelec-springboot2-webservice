@@ -1,4 +1,5 @@
 #!/bin/bash
+# 직접 배포 시 사용되는 스크립트
 
 REPOSITORY=/home/ec2-user/app/step2
 PROJECT_NAME=freelec-springboot2-webservice

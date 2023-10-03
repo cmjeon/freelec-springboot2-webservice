@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# 엔진엑스와 연결되어 있지 않은 Port 로 새 버전의 스프링 부트를 시작하는 스크립트
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
@@ -15,6 +16,7 @@ echo "> cp $REPOSITORY/zip/*.jar $REPOSITORY/"
 cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 새 애플리케이션 배포"
+
 JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"

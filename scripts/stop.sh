@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# 엔진엑스와 연결되어 있지 않은 스프링 부트를 종료하는 스크립트
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Port 를 전환하는 스크립트
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)

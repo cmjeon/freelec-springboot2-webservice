@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# 새 스프링 부트가 정상적으로 실행됐는지 확인하는 스크립트
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
